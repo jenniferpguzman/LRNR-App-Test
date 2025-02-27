@@ -10,7 +10,9 @@ import QuizResults from "./pages/QuizResults";
 function App() {
   return (
     <Router>
+      <div className="min-h-screen flex flex-col">
       <NavBar />
+      <div className="flex-grow">
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home route */}
         <Route path="/account" element={<Account />} /> {/* Account route */}
@@ -18,7 +20,9 @@ function App() {
         <Route path="/quiz-questions" element={<QuizQuestions />} /> {/* QuizQuestions */}
         <Route path="/quiz-results" element={<QuizResults />} /> {/* QuizResults */}
       </Routes>
+      </div>
       <Footer />
+      </div>
     </Router>
   );
 }
